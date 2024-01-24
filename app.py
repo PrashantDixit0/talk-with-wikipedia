@@ -3,7 +3,7 @@ from chat_retreival import retrieverSetup, chat
 import os
 import streamlit as st
     
-OPENAI_KEY =os.environ["OPENAI_API_KEY"]
+# OPENAI_KEY =os.environ["OPENAI_API_KEY"]
 
 @st.cache_resource
 def loading_wiki_pages(query):
@@ -15,7 +15,7 @@ def loading_wiki_pages(query):
 st.header('Talk with Wikipedia Pages', divider='rainbow')
 
 query_wiki = st.text_input('Enter Topic')
-
+OPENAI_KEY = st.text_input('openai')
 if query_wiki :
     # Chat Agent getting ready
     qa = loading_wiki_pages(query_wiki)
