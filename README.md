@@ -22,7 +22,7 @@ ollama pull llama2
 ```
 
 ### Youtube Demo
-![demo_img](../../assets/talk-with-wikipedia.png)
+![demo_img](assets/talk-with-wikipedia.png)
 You are ready to start
 
 ## Run Streamlit App
