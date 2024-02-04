@@ -1,21 +1,28 @@
-# Talk to Podcast
+# Talk to Wikipedia Pages
 
-Using this application, You can talk to any Youtube Podcast. All you need is following requirements installed in your system.
+Using this application, You can talk to Wikipedia Pages by giving topic. It will automatically extract relevant wikipedia pages and build a chatbot for you.
 
 1. Install Dependencies
 ```
 pip install -r requirements.txt
-pip install insanely-fast-whisper --force --ignore-requires-python
 ```
-2. Ollama Installation
+2. Ollama Installation 
 ```
 curl https://ollama.ai/install.sh | sh
 ollama pull llama2
 ```
+for Mac:
+```
+brew install ollama
+
+```
+On a separate terminal, run the following command:
+```
+ollama pull llama2
+```
 
 ### Youtube Demo
-[<img src="demo.png">](https://youtu.be/AGpl1h5K5v4)
-
+![demo_img](../../assets/talk-with-wikipedia.png)
 You are ready to start
 
 ## Run Streamlit App
@@ -24,3 +31,8 @@ You are ready to start
 ```
 OPENAI_API_KEY=sk-... streamlit run app.py
 ```
+
+### Future Scope
+1. Sources of Wikipedia Pages used for Chat
+2. Chat History
+3. Adding other platforms for building RAG otherthan Langchain
